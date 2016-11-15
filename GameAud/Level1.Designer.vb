@@ -33,9 +33,14 @@ Partial Class Level1
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Timer3 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer4 = New System.Windows.Forms.Timer(Me.components)
+        Me.Timer5 = New System.Windows.Forms.Timer(Me.components)
+        Me.bird = New System.Windows.Forms.PictureBox()
         Me.cat = New System.Windows.Forms.PictureBox()
+        Me.wall = New System.Windows.Forms.PictureBox()
         Me.StatusStrip1.SuspendLayout()
+        CType(Me.bird, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cat, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.wall, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GravityTimer
@@ -104,6 +109,21 @@ Partial Class Level1
         Me.Timer4.Enabled = True
         Me.Timer4.Interval = 40
         '
+        'Timer5
+        '
+        '
+        'bird
+        '
+        Me.bird.BackColor = System.Drawing.Color.Transparent
+        Me.bird.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.bird.Image = Global.GameAud.My.Resources.Resources.flamingo_flying_2
+        Me.bird.Location = New System.Drawing.Point(52, 138)
+        Me.bird.Name = "bird"
+        Me.bird.Size = New System.Drawing.Size(180, 138)
+        Me.bird.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.bird.TabIndex = 4
+        Me.bird.TabStop = False
+        '
         'cat
         '
         Me.cat.BackColor = System.Drawing.Color.Transparent
@@ -115,12 +135,25 @@ Partial Class Level1
         Me.cat.TabIndex = 1
         Me.cat.TabStop = False
         '
+        'wall
+        '
+        Me.wall.BackColor = System.Drawing.Color.Transparent
+        Me.wall.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.wall.Location = New System.Drawing.Point(866, 138)
+        Me.wall.Name = "wall"
+        Me.wall.Size = New System.Drawing.Size(180, 138)
+        Me.wall.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.wall.TabIndex = 5
+        Me.wall.TabStop = False
+        '
         'Level1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1058, 492)
+        Me.Controls.Add(Me.wall)
+        Me.Controls.Add(Me.bird)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.cat)
@@ -130,7 +163,9 @@ Partial Class Level1
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.StatusStrip1.ResumeLayout(False)
         Me.StatusStrip1.PerformLayout()
+        CType(Me.bird, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.cat, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.wall, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -146,4 +181,7 @@ Partial Class Level1
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Timer3 As System.Windows.Forms.Timer
     Friend WithEvents Timer4 As System.Windows.Forms.Timer
+    Friend WithEvents bird As PictureBox
+    Friend WithEvents Timer5 As Timer
+    Friend WithEvents wall As PictureBox
 End Class

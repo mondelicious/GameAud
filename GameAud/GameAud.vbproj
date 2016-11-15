@@ -266,6 +266,8 @@
     <None Include="Resources\41.png" />
     <Content Include="Resources\5.jpg" />
     <None Include="Resources\51.jpg" />
+    <None Include="Resources\funny-bird-flying.gif" />
+    <None Include="Resources\flamingo-flying-2.gif" />
     <Content Include="Scores.accdb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

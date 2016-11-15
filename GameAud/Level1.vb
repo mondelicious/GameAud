@@ -66,6 +66,7 @@
         createobstacle(2)
         Timer1.Enabled = True
         Timer2.Enabled = True
+        Timer5.Enabled = True
     End Sub
 
     Private Sub GravityTimer_Tick(sender As Object, e As EventArgs) Handles GravityTimer.Tick
@@ -107,6 +108,21 @@
             obstacle(i).Visible = True
 
         Next
+
+    End Sub
+    Private Sub birdd(ByVal Number As Integer)
+        Timer5.Interval += 10
+        If Timer5.Interval <= 20 Then
+            bird.Left += 10
+        ElseIf Timer5.Interval > 20 AndAlso Timer5.Interval <= 40 Then
+            bird.Top += 10
+        ElseIf Timer5.Interval > 40 AndAlso Timer5.Interval <= 60 Then
+            bird.Left -= 10
+        ElseIf Timer5.Interval > 60 AndAlso Timer5.Interval <= 80 Then
+            bird.Top -= 10
+        Else
+            Timer5.Interval = 0
+        End If
 
     End Sub
     Private Sub createobstaclee(ByVal Number As Integer)
@@ -206,6 +222,23 @@
 
         End If
 
+        If cat.Bounds.IntersectsWith(StatusStrip1.Bounds) Then
+            Timer1.Stop()
+            Timer2.Stop()
+            SaveScore.scoree.Text = score.Text
+            ObstacleTimer.Stop()
+            GameOver.ShowDialog()
+            obstacle(2).Visible = False
+        End If
+
+        If cat.Bounds.IntersectsWith(bird.Bounds) Then
+            Timer1.Stop()
+            Timer2.Stop()
+            SaveScore.scoree.Text = score.Text
+            ObstacleTimer.Stop()
+            GameOver.ShowDialog()
+            obstacle(2).Visible = False
+        End If
 
 
     End Sub
@@ -216,6 +249,19 @@
 
     Private Sub Level1_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
         My.Computer.Audio.Stop()
+    End Sub
+
+    Private Sub Timer5_Tick(sender As Object, e As EventArgs) Handles Timer5.Tick
+        bird.Location = New Point(bird.Location.X + 5,
+               bird.Location.Y)
+        If (bird.Location.X) And Right = 100 Then
+            bird.Location = New Point(bird.Location.X - 5,
+            bird.Location.Y)
+        End If
+
+        If bird.Bounds.IntersectsWith(wall.Bounds) Then
+            bird.Location = New Point(52, 138)
+        End If
     End Sub
 
     Sub leftdef()
