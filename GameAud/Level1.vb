@@ -67,6 +67,7 @@
         Timer1.Enabled = True
         Timer2.Enabled = True
         Timer5.Enabled = True
+        Timer6.Enabled = True
     End Sub
 
     Private Sub GravityTimer_Tick(sender As Object, e As EventArgs) Handles GravityTimer.Tick
@@ -122,6 +123,22 @@
             bird.Top -= 10
         Else
             Timer5.Interval = 0
+        End If
+
+    End Sub
+
+    Private Sub fishh(ByVal Number As Integer)
+        Timer6.Interval += 10
+        If Timer6.Interval <= 20 Then
+            fish.Left += 10
+        ElseIf Timer6.Interval > 20 AndAlso Timer6.Interval <= 40 Then
+            fish.Top += 10
+        ElseIf Timer6.Interval > 40 AndAlso Timer6.Interval <= 60 Then
+            fish.Left -= 10
+        ElseIf Timer6.Interval > 60 AndAlso Timer6.Interval <= 80 Then
+            fish.Top -= 10
+        Else
+            Timer6.Interval = 0
         End If
 
     End Sub
@@ -261,6 +278,22 @@
 
         If bird.Bounds.IntersectsWith(wall.Bounds) Then
             bird.Location = New Point(52, 138)
+        End If
+    End Sub
+
+    Private Sub Timer6_Tick(sender As Object, e As EventArgs) Handles Timer6.Tick
+        fish.Location = New Point(fish.Location.X - 5,
+               fish.Location.Y)
+        If (fish.Location.Y) And Left = 100 Then
+            fish.Location = New Point(fish.Location.Y + 5,
+            fish.Location.X)
+        End If
+
+        If cat.Bounds.IntersectsWith(fish.Bounds) Then
+            fish.Location = New Point(1207, 262)
+            Timer6.Enabled = False
+            scoret += 5
+            score.Text = scoret
         End If
     End Sub
 

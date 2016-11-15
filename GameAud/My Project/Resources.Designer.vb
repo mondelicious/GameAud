@@ -83,6 +83,16 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property animated_fish_image_0025() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("animated-fish-image-0025", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property bg() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("bg", resourceCulture)
@@ -235,6 +245,26 @@ Namespace My.Resources
         Friend ReadOnly Property game_over_cat() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("game over cat", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property images() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("images", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property Red_Fish() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Red Fish", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

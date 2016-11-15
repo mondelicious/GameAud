@@ -34,13 +34,16 @@ Partial Class Level1
         Me.Timer3 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer4 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer5 = New System.Windows.Forms.Timer(Me.components)
+        Me.Timer6 = New System.Windows.Forms.Timer(Me.components)
+        Me.fish = New System.Windows.Forms.PictureBox()
+        Me.wall = New System.Windows.Forms.PictureBox()
         Me.bird = New System.Windows.Forms.PictureBox()
         Me.cat = New System.Windows.Forms.PictureBox()
-        Me.wall = New System.Windows.Forms.PictureBox()
         Me.StatusStrip1.SuspendLayout()
+        CType(Me.fish, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.wall, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.bird, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cat, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.wall, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GravityTimer
@@ -112,12 +115,37 @@ Partial Class Level1
         'Timer5
         '
         '
+        'Timer6
+        '
+        '
+        'fish
+        '
+        Me.fish.BackColor = System.Drawing.Color.Transparent
+        Me.fish.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.fish.Image = Global.GameAud.My.Resources.Resources.animated_fish_image_0025
+        Me.fish.Location = New System.Drawing.Point(741, 279)
+        Me.fish.Name = "fish"
+        Me.fish.Size = New System.Drawing.Size(119, 109)
+        Me.fish.TabIndex = 6
+        Me.fish.TabStop = False
+        '
+        'wall
+        '
+        Me.wall.BackColor = System.Drawing.Color.Transparent
+        Me.wall.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.wall.Location = New System.Drawing.Point(866, 138)
+        Me.wall.Name = "wall"
+        Me.wall.Size = New System.Drawing.Size(180, 138)
+        Me.wall.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.wall.TabIndex = 5
+        Me.wall.TabStop = False
+        '
         'bird
         '
         Me.bird.BackColor = System.Drawing.Color.Transparent
         Me.bird.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.bird.Image = Global.GameAud.My.Resources.Resources.flamingo_flying_2
-        Me.bird.Location = New System.Drawing.Point(52, 138)
+        Me.bird.Location = New System.Drawing.Point(81, 138)
         Me.bird.Name = "bird"
         Me.bird.Size = New System.Drawing.Size(180, 138)
         Me.bird.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
@@ -135,23 +163,13 @@ Partial Class Level1
         Me.cat.TabIndex = 1
         Me.cat.TabStop = False
         '
-        'wall
-        '
-        Me.wall.BackColor = System.Drawing.Color.Transparent
-        Me.wall.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.wall.Location = New System.Drawing.Point(866, 138)
-        Me.wall.Name = "wall"
-        Me.wall.Size = New System.Drawing.Size(180, 138)
-        Me.wall.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
-        Me.wall.TabIndex = 5
-        Me.wall.TabStop = False
-        '
         'Level1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1058, 492)
+        Me.Controls.Add(Me.fish)
         Me.Controls.Add(Me.wall)
         Me.Controls.Add(Me.bird)
         Me.Controls.Add(Me.Label1)
@@ -163,9 +181,10 @@ Partial Class Level1
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.StatusStrip1.ResumeLayout(False)
         Me.StatusStrip1.PerformLayout()
+        CType(Me.fish, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.wall, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.bird, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.cat, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.wall, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -184,4 +203,6 @@ Partial Class Level1
     Friend WithEvents bird As PictureBox
     Friend WithEvents Timer5 As Timer
     Friend WithEvents wall As PictureBox
+    Friend WithEvents Timer6 As Timer
+    Friend WithEvents fish As PictureBox
 End Class
