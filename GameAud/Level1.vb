@@ -214,6 +214,10 @@
 
     End Sub
 
+    Private Sub Level1_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
+        My.Computer.Audio.Stop()
+    End Sub
+
     Sub leftdef()
         cat.Left = 0
     End Sub

@@ -12,9 +12,9 @@
             addsc.ExecuteNonQuery()
             playername.Clear()
             scoree.Text = ""
+            Start.Show()
             Level1.Close()
             Me.Close()
-            Start.Show()
         Catch ex As Exception
             MessageBox.Show("Progress saved!", "")
         End Try
