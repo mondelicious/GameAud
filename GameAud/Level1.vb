@@ -302,7 +302,7 @@
     End Sub
 
     Private Sub Timer7_Tick(sender As Object, e As EventArgs) Handles Timer7.Tick
-        ProgressBar1.Value += 5
+        ProgressBar1.Value += 2
         If ProgressBar1.Value = 100 Then
             fish.Location = New Point(741, 279)
             ProgressBar1.Value = 0
