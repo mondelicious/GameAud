@@ -257,6 +257,10 @@
             obstacle(2).Visible = False
         End If
 
+        If cat.Bounds.IntersectsWith(fish.Bounds) Then
+            Timer7.Enabled = True
+        End If
+
 
     End Sub
 
@@ -294,6 +298,16 @@
             Timer6.Enabled = False
             scoret += 5
             score.Text = scoret
+        End If
+    End Sub
+
+    Private Sub Timer7_Tick(sender As Object, e As EventArgs) Handles Timer7.Tick
+        ProgressBar1.Value += 5
+        If ProgressBar1.Value = 100 Then
+            fish.Location = New Point(741, 279)
+            ProgressBar1.Value = 0
+            Timer7.Enabled = False
+            Timer6.Enabled = True
         End If
     End Sub
 

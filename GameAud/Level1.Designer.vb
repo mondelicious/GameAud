@@ -39,6 +39,8 @@ Partial Class Level1
         Me.wall = New System.Windows.Forms.PictureBox()
         Me.bird = New System.Windows.Forms.PictureBox()
         Me.cat = New System.Windows.Forms.PictureBox()
+        Me.Timer7 = New System.Windows.Forms.Timer(Me.components)
+        Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
         Me.StatusStrip1.SuspendLayout()
         CType(Me.fish, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.wall, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -163,12 +165,23 @@ Partial Class Level1
         Me.cat.TabIndex = 1
         Me.cat.TabStop = False
         '
+        'Timer7
+        '
+        '
+        'ProgressBar1
+        '
+        Me.ProgressBar1.Location = New System.Drawing.Point(12, 57)
+        Me.ProgressBar1.Name = "ProgressBar1"
+        Me.ProgressBar1.Size = New System.Drawing.Size(100, 23)
+        Me.ProgressBar1.TabIndex = 7
+        '
         'Level1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1058, 492)
+        Me.Controls.Add(Me.ProgressBar1)
         Me.Controls.Add(Me.fish)
         Me.Controls.Add(Me.wall)
         Me.Controls.Add(Me.bird)
@@ -205,4 +218,6 @@ Partial Class Level1
     Friend WithEvents wall As PictureBox
     Friend WithEvents Timer6 As Timer
     Friend WithEvents fish As PictureBox
+    Friend WithEvents Timer7 As Timer
+    Friend WithEvents ProgressBar1 As ProgressBar
 End Class

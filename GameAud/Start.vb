@@ -4,6 +4,10 @@
         Application.Exit()
     End Sub
 
+    Sub bgmcontrolon()
+        My.Computer.Audio.Play(My.Resources.Nyan_Cat__original_, AudioPlayMode.BackgroundLoop)
+    End Sub
+
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Level1.Show()
         Me.Close()
@@ -26,6 +30,6 @@
     End Sub
 
     Private Sub Start_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        bgmcontrolon()
     End Sub
 End Class

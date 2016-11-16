@@ -165,7 +165,7 @@
       <DependentUpon>Level1.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
-      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <Generator>PublicVbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
@@ -271,6 +271,9 @@
     <None Include="Resources\Red Fish.png" />
     <None Include="Resources\images.png" />
     <None Include="Resources\animated-fish-image-0025.gif" />
+    <Content Include="Resources\Nyan+Cat+[original].mp3" />
+    <None Include="Resources\nyan_cat.bmp" />
+    <None Include="Resources\Nyan+Cat+[original].wav" />
     <Content Include="Scores.accdb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
